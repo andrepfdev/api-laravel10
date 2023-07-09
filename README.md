@@ -81,4 +81,6 @@ Exemplo de resposta:
       ]
     }
 
+## Contribuição
 
+Se você quiser contribuir para este projeto, sinta-se à vontade para abrir uma **issue** ou enviar uma solicitação de **pull**.
