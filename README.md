@@ -15,10 +15,11 @@ Esta é uma API Laravel para uma plataforma de troca de livros. A API permite qu
 1.  Certifique-se de ter o PHP instalado na sua máquina (o mais atual possível).
 2.  Clone este repositório: `git clone https://github.com/andrepfdev/api-laravel10.git`
 3.  Instale as dependências do Composer: `composer install`
-4. Link para Composer: https://getcomposer.org/download/
-5.  Copie o arquivo `.env.example` para `.env` e atualize as configurações de banco de dados.
-6.  Execute as migrações do banco de dados: `php artisan migrate`
-7.  Inicie o servidor de desenvolvimento: `php artisan serve`
+4.  Configure o arquivo `.env` para usar banco de dados SQLite. Instruções abaixo.
+5.  Execute as migrações do banco de dados: `php artisan migrate`
+6.  Inicie o servidor de desenvolvimento: `php artisan serve`
+
+Link para Composer: https://getcomposer.org/download/
 
 ### Banco de dados SQLite3
 
@@ -30,6 +31,14 @@ No arquivo .env configure o banco de dados:
     DB_CONNECTION=sqlite
 
 Pode inclusive apagar as outras constantes do banco de dados. Fica a seu critério.
+Caso não deseje usar SQLite como banco de dados, pode usar as configurações originais de `.env.example`:
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=laravel
+    DB_USERNAME=root
+    DB_PASSWORD= 
 
 ## Endpoints
 
@@ -57,8 +66,7 @@ Retorna uma lista de todos os livros disponíveis para troca.
 
 #### Parâmetros de consulta opcionais:
 
--   `titulo`: Filtra os livros pelo título.
--   `autor`: Filtra os livros pelo autor.
+*Nada cadastrado até o momento.*
 
 Exemplo de resposta:
 
