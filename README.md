@@ -12,7 +12,7 @@ Esta é uma API Laravel para uma plataforma de troca de livros. A API permite qu
 
 ## Configuração
 
-1.  Certifique-se de ter o PHP instalado na sua máquina (o mais atual possível).
+1.  Certifique-se de ter o PHP 8.2 (ou superior) instalado na sua máquina.
 2.  Clone este repositório: `git clone https://github.com/andrepfdev/api-laravel10.git`
 3.  Instale as dependências do Composer: `composer install`
 4.  Configure o arquivo `.env` para usar banco de dados SQLite. Instruções abaixo.
@@ -25,6 +25,8 @@ Link para Composer: https://getcomposer.org/download/
 
 Para baixar e usar o SQLite3: https://www.sqlite.org/
 Outra ferramenta útil usada no processo: https://sqlitestudio.pl/
+
+No Windows a instalação do SQLite pode ser feita desta forma: https://www.alura.com.br/artigos/sqlite-da-instalacao-ate-primeira-tabela 
 
 No arquivo .env configure o banco de dados:
 
@@ -66,7 +68,7 @@ Retorna uma lista de todos os livros disponíveis para troca.
 
 #### Parâmetros de consulta opcionais:
 
-*Nada cadastrado até o momento.*
+Até o momento todos estão configurados para pesquisar pelo ID
 
 Exemplo de resposta:
 
