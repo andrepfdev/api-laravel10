@@ -12,7 +12,7 @@ Esta é uma API Laravel para uma plataforma de troca de livros. A API permite qu
 
 ## Configuração
 
-Neste caso estou usando Windows 11 sem Docker
+Neste caso, estou usando Windows 11 sem Docker
 
 1.  Certifique-se de ter o PHP 8.2 (ou superior) instalado na sua máquina.
 2.  Clone este repositório: `git clone https://github.com/andrepfdev/api-laravel10.git`
