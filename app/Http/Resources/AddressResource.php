@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -15,11 +16,10 @@ class AddressResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'user' => $this->user_id,
             'street' => $this->street,
-            'city' => $this->city,
+            'number' => $this->number,
             'state' => $this->state,
-            'postal-code' => $this->postal_code,
-            'country' => $this->country, 
         ];
     }
 }

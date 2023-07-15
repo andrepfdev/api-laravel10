@@ -13,7 +13,9 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
+
         return UserResource::collection($users);
+
     }
 
     public function store(StoreUpdateUser $request)
@@ -27,11 +29,16 @@ class UserController extends Controller
 
     }
 
-    public function show(string $id)
+    public function show($id)
     {
-        $user = User::findOrFail($id);
+//        $user = User::findOrFail($id);
 
-        return new UserResource($user);
+//        return new UserResource($user);
+
+        $user = User::with('address')->find($id);
+
+        return response()->json($user);
+
     }
 
     public function update(StoreUpdateUser $request, string $id)

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AddressResource;
 use App\Models\Address;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AddressController extends Controller
@@ -13,17 +14,21 @@ class AddressController extends Controller
     {
         $address = Address::all();
 
-        return Address::collection($address);
+        return AddressResource::collection($address);
     }
+
 
     public function store()
     {
         //
     }
 
-    public function show()
+    public function show($address)
     {
-       //
+        $address = Address::get();
+
+        return response()->json($address);
+
     }
 
     public function update()
