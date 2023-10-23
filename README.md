@@ -32,9 +32,7 @@ No Windows a instalação do SQLite pode ser feita desta forma: https://www.alur
 
 No arquivo .env configure o banco de dados:
 
-    DB_CONNECTION=sqlite 
-    ou
-    DB_CONNECTION=sqlite3 no Linux 
+    DB_CONNECTION=sqlite
 
 Pode inclusive apagar as outras constantes do banco de dados. Fica a seu critério.
 Caso não deseje usar SQLite como banco de dados, pode usar as configurações originais de `.env.example`:
@@ -46,6 +44,10 @@ Caso não deseje usar SQLite como banco de dados, pode usar as configurações o
     DB_USERNAME=root
     DB_PASSWORD= 
 
+Caso acontece algum erro ao gerar o banco de dados, cetifique-se de instalar o pacote:
+
+    sudo apt install php-sqlite3
+    
 ## Endpoints
 
 A API possui os seguintes endpoints principais:
